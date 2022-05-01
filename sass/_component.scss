@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+
+  width: 90vw;
+}
+
+.panel-1 {
+  background-image: url(../img/image-1.jpg);
+}
+
+.panel {
+  height: 80vh;
+  background-size: auto 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+  position: relative;
+  margin: 10px;
+  flex: 0.5;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.panel-text {
+  font-size: 2.4rem;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 5rem;
+  left: 3rem;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.panel-active {
+  flex: 1.5;
+}
+
+.panel-active .panel-text {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+@media (max-width: 30em) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
